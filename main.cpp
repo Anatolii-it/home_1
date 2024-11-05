@@ -1,15 +1,4 @@
 #include <iostream>
-using namespace std;
-
-struct Car
-{
-	char model[10];
-	char kpp[10];
-	char color[8];
-	int v; 
-	int r;
-};
-#include <iostream>
 #include <vector>
 #include <fstream>
 #include <sstream>
