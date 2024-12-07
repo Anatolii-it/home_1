@@ -1,27 +1,14 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-struct Car
-{
-	char model[10];
-	char kpp[10];
-	char color[8];
-	int v; 
-	int r;
-};
+
 
 int main() {
-	Car vaz = { "vaz 2101","5ст фіат","Біла",1.5,14};
-	cout << "    база машин   \n\n";
-	cout << "Марка           " << vaz.model <<"\n";
-	cout << "коробка         " << vaz.kpp << "\n";
-	cout << "Об'єм двигуна   " << vaz.v << "\n";
-	cout << "Колір           " << vaz.color << "\n";
-	cout << "Колеса          " << vaz.r<< "\n";
-
-
-	
-
+	long pop1 = 842569, pop2 = 47, pop3 = 9784;
+	cout << setw(10) << "Київ" << setw(8) << pop1 << endl;
+	cout << setw(10) << "Копайгород" << setw(8) << pop2 << endl;
+	cout << setw(10) << "Вінниця" << setw(8) << pop3 << endl;
 
 	return 0;
 }
