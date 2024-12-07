@@ -111,9 +111,9 @@ void searchEmployee() {
             cin >> pdoba;
             cout << "Введіть кількість годин відключення світла в добі -  ";
             cin >> h;
-            p = (emp.kWt_month - (pdoba * 31)) / 31 / s + emp.Max_power_h;
+            p = (emp.kWt_month - (pdoba * 24)) / 31 / s + emp.Max_power_h;
             cout << "середня потужність інвертора -  " << p << endl;
-            a = double(emp.kWt_month - (pdoba * 31)) / 31 / s;
+            a = double(pdoba * 24) / s;
             cout << "#---------------------------------------------#" << endl;
             cout <<"потрібна ємність аккумулятора кВт - " << a << endl;
             cout << "#---------------------------------------------#" << endl;
