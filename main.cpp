@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <iomanip>
 #include <vector>
 #include <fstream>
 #include <sstream>
@@ -71,7 +72,7 @@ void addEmployee() {
 
 void editEmployee() {
     int phone;
-    cout << "Enter phone of the employee to edit: ";
+    cout << "Введіть номер для редагування кліента: ";
     cin >> phone;
     cout << "#---------------------------------------------#" << endl;
     for (auto& emp : employees) {
@@ -184,10 +185,10 @@ void displayAllEmployees() {
     cout << "#---------------------------------------------#" << endl;
     cout << "Список всіх клієнтів:" << endl;
     for (const auto& emp : employees) {
-        cout << "Телефон: " << emp.phone << "\n"
-            << "    кВт місяць: " << emp.kWt_month << "\n"
-            << "    немає світла в день: " << emp.time_day << "\n"
-            << "    Найпотужний об'єкт кВт: " << emp.Max_power_h << endl;
+        cout << "Телефон: " <<setw(30)<< emp.phone << "\n";  //setw(30) відступ від останнього символу вирівнювання по правому краю
+        cout << "кВт місяць: " << setw(27) << emp.kWt_month << "\n";
+        cout << "немає світла в день: " << setw(18) << emp.time_day << "\n";
+        cout << "Найпотужний об'єкт кВт: " << setw(15) << emp.Max_power_h << endl;
         cout << "#---------------------------------------------#" << endl;
     }
 }
