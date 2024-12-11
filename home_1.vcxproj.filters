@@ -10,4 +10,9 @@
       <Filter>main</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fun.h">
+      <Filter>main</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

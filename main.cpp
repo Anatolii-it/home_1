@@ -1,19 +1,90 @@
-﻿#include <iostream>
-using namespace std;
-float lbstokg(float);
+﻿#include "fun.h"
 
+char d;
+float a=5, b=2, result;
 int main()
 {
-	float lbs, kgs;
-	cout << "\nВведіть вес в фунтах - ";
-	cin >> lbs;
-	kgs = lbstokg(lbs);
-	cout << "Вага в кілограмах равна - " << kgs << endl;
+label:
+	
+	cout << "Виберіть дію над двома числами ";
+	//cin.ignore();
+	cin >> d;
+	if (d == '-') {
+		cin.ignore();
+		cout << "Введіть перше число - " << endl;
+		cin >> a;
+		cout << "Введіть друге число - " << endl;
+		cin.ignore();
+		cin >> b;
+		result = otnim(a, b);
+		cout << a << d << b <<" = " << result << endl;
+		cout << "----------------------" << endl;
+	}
+	else if (d == '+') {
+		cin.ignore();
+		cout << "Введіть перше число - " << endl;
+		cin >> a;
+		cout << "Введіть друге число - " << endl;
+		cin.ignore();
+		cin >> b;
+		result = summa(a, b);
+		cout << a << d << b << " = " << result << endl;
+		cout << "----------------------" << endl;
+	}
+	else if (d == '*') {
+		cin.ignore();
+		cout << "Введіть перше число - " << endl;
+		cin >> a;
+		cout << "Введіть друге число - " << endl;
+		cin.ignore();
+		cin >> b;
+		result = umnoj(a, b);
+		cout << a << d << b << " = " << result << endl;
+		cout << "----------------------" << endl;
+	}
+	else if (d == '/') {
+		cin.ignore();
+		cout << "Введіть перше число - " << endl;
+		cin >> a;
+		cout << "Введіть друге число - " << endl;
+		cin.ignore();
+		cin >> b;
+		result = podtl(a, b);
+		cout << a << d << b << " = " << result << endl;
+		cout << "----------------------" << endl;
+	}
+	else {
+		cout << " ----------------------" << endl;
+		cout << "#     До побачення     #"  << endl;
+		cout << " ----------------------" << endl;
+		return(0);
+	}
+	cout << "Для виходу замісь дії нажміть любу букву" << endl;
+	cout  << endl;
+	goto label;
+	cin.ignore();
+	cin.get();
 
 	return 0;
 }
 
-float lbstokg(float pounds) {
-	float kilograms = 0.45392 * pounds;
-	return kilograms;
+float summa(float a, float b) {
+	cout << "----------------------" << endl;
+	result = a + b;
+	return result;
+}
+float otnim(float a, float b) {
+	cout << "----------------------" << endl;
+	result = a - b;
+	return result;
+}
+float umnoj(float a, float b) {
+	cout << "----------------------" << endl;
+	result = a * b;
+	return result;
+}
+float podtl(float a, float b) {
+	cout << "----------------------" << endl;
+	result = a / b;
+	return result;
 }
