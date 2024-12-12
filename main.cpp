@@ -1,35 +1,25 @@
 ﻿#include <iostream>
 using namespace std;
-#include <conio.h> // äëÿ getche()
+
+
 int main()
 {
-	char dir = 'a';
-	int x = 10, y = 10;
-	cout << "Натисніть Enter для виходу...\n";
-	while (dir != '\r ') // пока не нажата Enter
-	{
-		cout << "\nВаші координати: " << x << ", " << y;
-		cout << "\nВиберіть направлення (n,s,e,w): ";
-		dir = _getche(); 
-		if (dir == 'n') // на север
-			y--;
-		else
-			if (dir == 's') // на юг
-				y++;
-			else
-				if (dir == 'e') // на восток
-					x++;
-				else
-					if (dir == 'w')
-					{
-						x--;
-	
-					}
-						
-	} 
-	cout << "ви заблукали" << endl;
+	int* pAge = new int[10];
+	pAge[0] = 10;
+	pAge[1] = 25;
+	cout << "Веедіть значення для pAge[9]" << endl;
+	cin >> pAge[9];
 
+	for (int i = 0; i < 10; i++) {
+		cout << "Значення і - " << i << "  Значення pAge[i] - " << pAge[i] <<"Адреса - "<<pAge +i << endl;
+	}
+
+
+
+	delete pAge;
 	
 
+	cin.ignore();                               // очистка буфера вводу
+	cin.get();
 	return 0;
 }
