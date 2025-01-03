@@ -1,24 +1,24 @@
 #include <iostream>
 using namespace std;
 
-struct Car
-{
-	char model[10];
-	char kpp[10];
-	char color[8];
-	int v; 
-	int r;
-};
 
 int main() {
-	Car vaz = { "vaz 2101","5ст фіат","Біла",1.5,14};
-	cout << "    база машин   \n\n";
-	cout << "Марка           " << vaz.model <<"\n";
-	cout << "коробка         " << vaz.kpp << "\n";
-	cout << "Об'єм двигуна   " << vaz.v << "\n";
-	cout << "Колір           " << vaz.color << "\n";
-	cout << "Колеса          " << vaz.r<< "\n";
-
+	const int c = 10;
+	int arr[3][3];
+	int x;
+	// x - визначаемо довжину масиву розмір масиву ділимо на скільки займає одна ячкйка масиву
+	(x = sizeof(arr) / sizeof(arr[0]));
+	
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			arr[i][j] = (1+i)*(1+j);
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+	cout << "Довжина масиву - " << x << endl;
 
 	
 
