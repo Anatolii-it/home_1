@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 using namespace std;
-#include <conio.h> // äëÿ getche()
+#include <conio.h> // для getche()
 int main()
 {
 	char dir = 'a';
